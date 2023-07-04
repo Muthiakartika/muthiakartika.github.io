@@ -324,6 +324,12 @@ b, strong, a {
 .dark-mode .navbar-light .navbar-nav .nav-link:hover {
   color: #ffc200;
 }
+.dark-mode .navbar-collapse{
+    background: #0c0c0d;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
 .dark-mode .navbar[class*="headroom--not-top"] {
   background: #0c0c0d;
   border-bottom: 1px solid #1f1f1f;
@@ -332,6 +338,17 @@ b, strong, a {
   background: #0d0c15;
   color: #ffffff;
 }
+
+.dark-mode .navbar-toggler .navbar-toggler-icon {
+  background: #ffffff;
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin: 5px 0;
+  transition: all 0.4s ease;
+  position: relative;
+}
+
 .dark-mode .feature-card .uil,
 .dark-mode .navbar-light .navbar-brand,
 .dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode h4, .dark-mode h5, .dark-mode h6,
@@ -505,7 +522,26 @@ b, strong, a {
   }
 
   .color-mode {
-    display: none;
+    display: flexbox;
+  }
+
+  /* .color-mode-icon {
+    position: relative;
+    right: 6px;
+  } */
+
+  .color-mode-icon:after {
+    font-family: 'unicons';
+    content: '\ea9f';
+    font-size: 24px;
+    font-weight: 100;
+    font-style: normal;
+  }
+  .color-mode-icon.active:after {
+    font-family: 'unicons';
+    content: '\eb65';
+    font-size: 24px;
+    color: #ffffff;
   }
 
   .about-image {
@@ -557,7 +593,7 @@ b, strong, a {
   }
 
   .animated-item-small {
-    font-size: 26px;
+    font-size: 27px;
   }
   .custom-btn-group {
     text-align: center;
